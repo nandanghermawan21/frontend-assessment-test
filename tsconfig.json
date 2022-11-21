@@ -15,19 +15,12 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": "src",
-    "types": [
-      "cypress"
-    ],
+    "types": ["cypress"],
     "paths": {
       "@pages/*": ["./pages/*"],
       "@styles/*": ["./styles/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": [
-    "node_modules",
-    ".next",
-    "**/*.test.tsx",
-    "**/*.test.ts"
-  ]
+  "exclude": ["node_modules", ".next", "**/*.test.tsx", "**/*.test.ts"]
 }
