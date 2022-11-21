@@ -74,7 +74,13 @@ const Planets: NextPage = () => {
             >
               <div className={styles.grid}>
                 {planets.map((planet: any, i) => (
-                  <a href={'planets/detail'} className="box m-3 user" key={i}>
+                  <a
+                    href={
+                      'planets/detail?id=' + planet.url.split('/')[planet.url.split('/').length - 2]
+                    }
+                    className="box m-3 user"
+                    key={i}
+                  >
                     <div className={styles.planet}>
                       <h2>{planet.name}</h2>
                       <div className={styles.row}>
@@ -99,13 +105,13 @@ const Planets: NextPage = () => {
                           <span className={styles.logo}>
                             <Image src="/diameter.png" alt="" width={12} height={12} />
                             &nbsp;
-                            <label>{planet.diameter}</label>
+                            <label>{Number(planet.diameter).toLocaleString()}</label>
                           </span>
                         </p>
                         &nbsp; &nbsp;
                         <p>
                           <span className={styles.logo}>
-                            <label>{planet.population / 1000000} M</label>
+                            <label>{Number(planet.population / 1000000).toLocaleString()} M</label>
                             &nbsp;
                             <Image src="/population.png" alt="" width={12} height={12} />
                           </span>
