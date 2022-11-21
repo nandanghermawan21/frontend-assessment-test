@@ -1,0 +1,8 @@
+{
+  "extends": ["next/core-web-vitals", "plugin:prettier/recommended", "plugin:cypress/recommended"],
+  "plugins": ["better-styled-components", "prettier", "prettier", "cypress"],
+  "rules": {
+    "better-styled-components/sort-declarations-alphabetically": 2,
+    "prettier/prettier": ["error", {}, { "usePrettierrc": true }]
+  }
+}
